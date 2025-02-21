@@ -27,6 +27,7 @@ async function bootstrap() {
     inheritAppConfig: true
   })
 
+  await app.startAllMicroservices();
   await app.listen(envs.port);
   logger.log(`Payments Microservice running on port ${envs.port}`)
 }
